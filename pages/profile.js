@@ -17,7 +17,7 @@ export default function Profile() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const skillsArray = form.skills.split(',').map(skill => skill.trim());
-        await axios.post('https://<your-railway-backend-url>/candidate/create', {
+        await axios.post('https://mira-backend-production.up.railway.app/candidate/create', {
             ...form,
             skills: skillsArray,
             experience: Number(form.experience)

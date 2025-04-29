@@ -6,7 +6,7 @@ export default function Jobs() {
     const [jobs, setJobs] = useState([]);
 
     const searchJobs = async () => {
-        const res = await axios.get(`https://<your-railway-backend-url>/job/search?skill=${skill}`);
+        const res = await axios.get(`https://mira-backend-production.up.railway.app/job/search?skill=${skill}`);
         setJobs(res.data);
     };
 
